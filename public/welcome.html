@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('images/image.png') no-repeat center center fixed;
+            background-size: cover; /* Ensure the image covers the entire viewport */
+            font-family: 'Fredoka One', cursive;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            animation: bounce 1s infinite, colorChange 2s infinite;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-50px);
+            }
+            60% {
+                transform: translateY(-25px);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #3498db; /* Blue */
+            }
+            25% {
+                color: #e74c3c; /* Red */
+            }
+            50% {
+                color: #f1c40f; /* Yellow */
+            }
+            75% {
+                color: #2ecc71; /* Green */
+            }
+            100% {
+                color: #3498db; /* Blue */
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const firstName = params.get('firstName') || 'Guest';
+            document.getElementById('welcomeMessage').textContent = `Welcome  ${firstName}!`;
+        });
+    </script>
+</head>
+<body>
+    <h1 id="welcomeMessage">Form Submitted</h1>
+</body>
+</html>
