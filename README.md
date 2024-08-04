@@ -23,6 +23,12 @@ This project provides a responsive registration form with validation and user-fr
 - **`index.html`**: Main HTML file for the form.
 
 
+## Sample Image
+![image](https://github.com/user-attachments/assets/e5e30163-68ec-407c-9f87-63e1e975e2c5)
+![image](https://github.com/user-attachments/assets/20ba2e75-b3e2-4e1a-8420-e390bf1010f1)
+
+
+
   
 
 
